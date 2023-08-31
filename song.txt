@@ -1,11 +1,11 @@
 verse-01.txt
 
-chorus-01.txt
+chorus.txt
 
 verse-02.txt
 
-chorus-02.txt
+chorus.txt
 
 verse-03.txt
 
-chorus-03.txt
+chorus.txt
