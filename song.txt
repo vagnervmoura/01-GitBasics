@@ -1,9 +1,6 @@
 verse-01.txt
 
-Churrasco, bom chimarrão, fandango, trago e mulher
-É disso que o velho gosta, é isso que o velho quer
-Churrasco, bom chimarrão, fandango, trago e mulher
-É disso que o velho gosta, é isso que o velho quer
+chorus-01.txt
 
 E foi assim que aprendi a gostar do que é bom
 A tocar minha cordeona, cantar sem sair do tom
