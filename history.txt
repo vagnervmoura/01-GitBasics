@@ -1,0 +1,521 @@
+PS D:\PYTHON\Course\01-GitBasics> git log
+commit 6c6d115ca33525aaa63c34fed32b6b158387cbc6 (HEAD -> master)
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 14:11:25 2023 +0100
+
+    On the file song.txt renamed the chorus files
+
+commit 64952874b278a50fc792470d30b3e5727bfa5524
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 14:05:14 2023 +0100
+
+    File chorus-01.txt renamed as chorus.txt
+
+commit 7f2698ff44a6b44fea8870bb39a0f23de3199781
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 14:02:08 2023 +0100
+
+    Files chorus-02.txt and chorus-03.txt deleted
+
+commit 3a0da69e381805864118bd2ef7ea05a1a8b7182d
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 12:16:35 2023 +0100
+
+    Revert "Deleted one line from chorus-01.txt file"
+
+    This reverts commit 218be1f085671b4b645967cea4ab89e9d38a9d49.
+
+    S
+
+commit e37b2e4f44b85ca4475da23ca0b4ee2d05d192b7
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 12:12:31 2023 +0100
+
+    Revert "Revert "Created a new file chorus-03.txt and move the third chorus from file song.txt to chorus-03.txt""
+
+    This reverts commit ebd09b9341fcecdb2093d4d95f8ec0f7db2c7676.
+
+commit ebd09b9341fcecdb2093d4d95f8ec0f7db2c7676
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 12:05:21 2023 +0100
+
+    Revert "Created a new file chorus-03.txt and move the third chorus from file song.txt to chorus-03.txt"
+
+    This reverts commit abcf189f34dcde0f90de9ba11b3d917acd4abfa6.
+
+commit 218be1f085671b4b645967cea4ab89e9d38a9d49
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 12:04:01 2023 +0100
+
+    Deleted one line from chorus-01.txt file
+
+commit abcf189f34dcde0f90de9ba11b3d917acd4abfa6
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:31:14 2023 +0100
+
+    Created a new file chorus-03.txt and move the third chorus from file song.txt to chorus-03.txt
+
+commit 31fe8a7dc7c48992e36902fb2b74d622d309dac3
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:28:33 2023 +0100
+
+    Created a new file verse-03.txt and moved the third verse from file song.txt to verse-03.txt
+
+commit ba90972ab9648b3afde11a44b54b7f3bc883823e
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:24:49 2023 +0100
+
+    Added the file chorus-02.txt and moved the second chorus from a file song.txt to chorus-02.txt
+
+commit caacfdb7e1da0d281a7b101083f14226903d6af5
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:19:09 2023 +0100
+
+    added the file verse-02.txt and moved the seccond verse from song.txt to verse-02.txt
+
+commit c2c6be04fe54d1d8cfab8ff7cefdd1075fa67b6b
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:12:45 2023 +0100
+
+    Moved the first chorus from song.txt to chorus-01-txt
+
+commit 7c91bf67f747e0db01cc4606a0e0c454db8485a9
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Tue Aug 29 19:53:39 2023 +0100
+
+    Saved the Files verse-01.txt and song.txt
+
+commit 2b410d903101c8708b7823973a28c4bfb31050a3
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Tue Aug 29 19:50:26 2023 +0100
+
+    Created a separate files verse and chorus 01, Than moved the first verse from song.txt to verse-01.txt
+
+commit 03756d1d034094806a4950e03df3c59a1f59345c
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Tue Aug 29 19:38:20 2023 +0100
+
+    Addeded a Lyrics of the song to the repository
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics> git log -p song.txt
+commit 6c6d115ca33525aaa63c34fed32b6b158387cbc6 (HEAD -> master)
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 14:11:25 2023 +0100
+
+    On the file song.txt renamed the chorus files
+
+diff --git a/song.txt b/song.txt
+index 0fd0ad9..e064e85 100644
+--- a/song.txt
++++ b/song.txt
+@@ -1,11 +1,11 @@
+ verse-01.txt
+
+-chorus-01.txt
++chorus.txt
+
+ verse-02.txt
+
+-chorus-02.txt
++chorus.txt
+
+ verse-03.txt
+
+-chorus-03.txt
+\ No newline at end of file
++chorus.txt
+\ No newline at end of file
+
+commit e37b2e4f44b85ca4475da23ca0b4ee2d05d192b7
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 12:12:31 2023 +0100
+
+    Revert "Revert "Created a new file chorus-03.txt and move the third chorus from file song.txt to chorus-03.txt""
+
+    This reverts commit ebd09b9341fcecdb2093d4d95f8ec0f7db2c7676.
+
+diff --git a/song.txt b/song.txt
+index 686deca..0fd0ad9 100644
+--- a/song.txt
++++ b/song.txt
+@@ -8,7 +8,4 @@ chorus-02.txt
+
+ verse-03.txt
+
+-Churrasco, bom chimarrão, fandango, trago e mulher
+-É disso que o velho gosta, é isso que o velho quer
+-Churrasco, bom chimarrão, fandango, trago e mulher
+-É disso que o velho gosta, é isso que o velho quer
+\ No newline at end of file
++chorus-03.txt
+\ No newline at end of file
+
+commit ebd09b9341fcecdb2093d4d95f8ec0f7db2c7676
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 12:05:21 2023 +0100
+
+    Revert "Created a new file chorus-03.txt and move the third chorus from file song.txt to chorus-03.txt"
+
+    This reverts commit abcf189f34dcde0f90de9ba11b3d917acd4abfa6.
+
+diff --git a/song.txt b/song.txt
+index 0fd0ad9..686deca 100644
+--- a/song.txt
++++ b/song.txt
+@@ -8,4 +8,7 @@ chorus-02.txt
+
+ verse-03.txt
+
+-chorus-03.txt
+\ No newline at end of file
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
+\ No newline at end of file
+
+commit abcf189f34dcde0f90de9ba11b3d917acd4abfa6
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:31:14 2023 +0100
+
+    Created a new file chorus-03.txt and move the third chorus from file song.txt to chorus-03.txt
+
+diff --git a/song.txt b/song.txt
+index 686deca..0fd0ad9 100644
+--- a/song.txt
++++ b/song.txt
+@@ -8,7 +8,4 @@ chorus-02.txt
+
+ verse-03.txt
+
+-Churrasco, bom chimarrão, fandango, trago e mulher
+-É disso que o velho gosta, é isso que o velho quer
+-Churrasco, bom chimarrão, fandango, trago e mulher
+-É disso que o velho gosta, é isso que o velho quer
+\ No newline at end of file
++chorus-03.txt
+\ No newline at end of file
+
+commit 31fe8a7dc7c48992e36902fb2b74d622d309dac3
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:28:33 2023 +0100
+
+    Created a new file verse-03.txt and moved the third verse from file song.txt to verse-03.txt
+
+diff --git a/song.txt b/song.txt
+index e6f735c..686deca 100644
+--- a/song.txt
++++ b/song.txt
+@@ -6,10 +6,7 @@ verse-02.txt
+
+ chorus-02.txt
+
+-Saí da minha fazenda e me soltei pelo pago
+-E hoje tenho uma prenda para me fazer afago
+-E quando vier um piazinho para enfeitar nosso ninho, mais alegria vou ter
+-E se ele me perguntar do que se deve gostar, como meu pai vou dizer
++verse-03.txt
+
+ Churrasco, bom chimarrão, fandango, trago e mulher
+ É disso que o velho gosta, é isso que o velho quer
+
+commit ba90972ab9648b3afde11a44b54b7f3bc883823e
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:24:49 2023 +0100
+
+    Added the file chorus-02.txt and moved the second chorus from a file song.txt to chorus-02.txt
+
+diff --git a/song.txt b/song.txt
+index 3d3c533..e6f735c 100644
+--- a/song.txt
++++ b/song.txt
+@@ -2,16 +2,9 @@ verse-01.txt
+
+ chorus-01.txt
+
+-E foi assim que aprendi a gostar do que é bom
+-A tocar minha cordeona, cantar sem sair do tom
+-Ser amigo dos amigos
+-Nunca fugir do perigo, meu velho pai me ensinou
+-E eu que vivo a cantar, sempre aprendi a gostar do que o meu velho gostou
++verse-02.txt
+
+-Churrasco, bom chimarrão, fandango, trago e mulher
+-É disso que o velho gosta, é isso que o velho quer
+-Churrasco, bom chimarrão, fandango, trago e mulher
+-É disso que o velho gosta, é isso que o velho quer
++chorus-02.txt
+
+ Saí da minha fazenda e me soltei pelo pago
+ E hoje tenho uma prenda para me fazer afago
+
+commit c2c6be04fe54d1d8cfab8ff7cefdd1075fa67b6b
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:12:45 2023 +0100
+
+    Moved the first chorus from song.txt to chorus-01-txt
+
+diff --git a/song.txt b/song.txt
+index e0f2d83..3d3c533 100644
+--- a/song.txt
++++ b/song.txt
+@@ -1,9 +1,6 @@
+ verse-01.txt
+
+-Churrasco, bom chimarrão, fandango, trago e mulher
+-É disso que o velho gosta, é isso que o velho quer
+-Churrasco, bom chimarrão, fandango, trago e mulher
+-É disso que o velho gosta, é isso que o velho quer
++chorus-01.txt
+
+ E foi assim que aprendi a gostar do que é bom
+ A tocar minha cordeona, cantar sem sair do tom
+
+commit 7c91bf67f747e0db01cc4606a0e0c454db8485a9
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Tue Aug 29 19:53:39 2023 +0100
+
+    Saved the Files verse-01.txt and song.txt
+
+diff --git a/song.txt b/song.txt
+index b44e85b..e0f2d83 100644
+--- a/song.txt
++++ b/song.txt
+@@ -1,11 +1,4 @@
+-É Disso Que o Velho Gosta (part. Chitãozinho & Xororó)
+-Gaúcho da Fronteira
+-
+-Eu sou um peão de estância, nascido lá no galpão
+-E aprendi desde criança a honrar a tradição
+-Meu pai era um gaúcho que nunca conheceu luxo
+-Mas viveu folgado, enfim
+-E quando alguém perguntava do que ele mais gostava, o velho dizia assim
++verse-01.txt
+
+ Churrasco, bom chimarrão, fandango, trago e mulher
+ É disso que o velho gosta, é isso que o velho quer
+
+commit 03756d1d034094806a4950e03df3c59a1f59345c
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Tue Aug 29 19:38:20 2023 +0100
+
+    Addeded a Lyrics of the song to the repository
+
+diff --git a/song.txt b/song.txt
+new file mode 100644
+index 0000000..b44e85b
+--- /dev/null
++++ b/song.txt
+@@ -0,0 +1,34 @@
++É Disso Que o Velho Gosta (part. Chitãozinho & Xororó)
++Gaúcho da Fronteira
++
++Eu sou um peão de estância, nascido lá no galpão
++E aprendi desde criança a honrar a tradição
++Meu pai era um gaúcho que nunca conheceu luxo
++Mas viveu folgado, enfim
++E quando alguém perguntava do que ele mais gostava, o velho dizia assim
++
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
++
++E foi assim que aprendi a gostar do que é bom
++A tocar minha cordeona, cantar sem sair do tom
++Ser amigo dos amigos
++Nunca fugir do perigo, meu velho pai me ensinou
++E eu que vivo a cantar, sempre aprendi a gostar do que o meu velho gostou
++
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
++
++Saí da minha fazenda e me soltei pelo pago
++E hoje tenho uma prenda para me fazer afago
++E quando vier um piazinho para enfeitar nosso ninho, mais alegria vou ter
++E se ele me perguntar do que se deve gostar, como meu pai vou dizer
++
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
+\ No newline at end of file
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics> git log -p verse-01.txt
+commit 7c91bf67f747e0db01cc4606a0e0c454db8485a9
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Tue Aug 29 19:53:39 2023 +0100
+
+    Saved the Files verse-01.txt and song.txt
+
+diff --git a/verse-01.txt b/verse-01.txt
+index e69de29..6e79cfb 100644
+--- a/verse-01.txt
++++ b/verse-01.txt
+@@ -0,0 +1,5 @@
++Eu sou um peão de estância, nascido lá no galpão
++E aprendi desde criança a honrar a tradição
++Meu pai era um gaúcho que nunca conheceu luxo
++Mas viveu folgado, enfim
++E quando alguém perguntava do que ele mais gostava, o velho dizia assim
+\ No newline at end of file
+
+commit 2b410d903101c8708b7823973a28c4bfb31050a3
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Tue Aug 29 19:50:26 2023 +0100
+
+    Created a separate files verse and chorus 01, Than moved the first verse from song.txt to verse-01.txt
+
+diff --git a/verse-01.txt b/verse-01.txt
+new file mode 100644
+index 0000000..e69de29
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics> git log -p verse-02.txt
+commit ba90972ab9648b3afde11a44b54b7f3bc883823e
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:24:49 2023 +0100
+
+    Added the file chorus-02.txt and moved the second chorus from a file song.txt to chorus-02.txt
+
+diff --git a/verse-02.txt b/verse-02.txt
+index e69de29..3995928 100644
+--- a/verse-02.txt
++++ b/verse-02.txt
+@@ -0,0 +1,5 @@
++E foi assim que aprendi a gostar do que é bom
++A tocar minha cordeona, cantar sem sair do tom
++Ser amigo dos amigos
++Nunca fugir do perigo, meu velho pai me ensinou
++E eu que vivo a cantar, sempre aprendi a gostar do que o meu velho gostou
+\ No newline at end of file
+
+commit caacfdb7e1da0d281a7b101083f14226903d6af5
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:19:09 2023 +0100
+
+    added the file verse-02.txt and moved the seccond verse from song.txt to verse-02.txt
+
+diff --git a/verse-02.txt b/verse-02.txt
+new file mode 100644
+index 0000000..e69de29
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics> git log -p verse-03.txt
+commit 31fe8a7dc7c48992e36902fb2b74d622d309dac3
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 11:28:33 2023 +0100
+
+    Created a new file verse-03.txt and moved the third verse from file song.txt to verse-03.txt
+
+diff --git a/verse-03.txt b/verse-03.txt
+new file mode 100644
+index 0000000..bbc3e58
+--- /dev/null
++++ b/verse-03.txt
+@@ -0,0 +1,4 @@
++Saí da minha fazenda e me soltei pelo pago
++E hoje tenho uma prenda para me fazer afago
++E quando vier um piazinho para enfeitar nosso ninho, mais alegria vou ter
++E se ele me perguntar do que se deve gostar, como meu pai vou dizer
+\ No newline at end of file
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics> git log -p chorus-01.txt
+fatal: ambiguous argument 'chorus-01.txt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics> git log -p chorus-02.txt
+fatal: ambiguous argument 'chorus-02.txt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics> git log -p chorus-03.txt
+fatal: ambiguous argument 'chorus-03.txt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics>
+PS D:\PYTHON\Course\01-GitBasics> git log -p chorus.txt
+commit 64952874b278a50fc792470d30b3e5727bfa5524
+Author: Vagner Vignoto Moura <eu@vagnermoura.com>
+Date:   Thu Aug 31 14:05:14 2023 +0100
+
+    File chorus-01.txt renamed as chorus.txt
+
+diff --git a/chorus.txt b/chorus.txt
+new file mode 100644
+index 0000000..017dfcc
+--- /dev/null
++++ b/chorus.txt
+@@ -0,0 +1,4 @@
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
++Churrasco, bom chimarrão, fandango, trago e mulher
++É disso que o velho gosta, é isso que o velho quer
+\ No newline at end of file
+PS D:\PYTHON\Course\01-GitBasics>
